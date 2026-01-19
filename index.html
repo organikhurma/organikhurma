@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrganikHurma.com - Doğal Lezzet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              // Updated Palette: Deep Forest Green (More Natural/Premium) & Warm Gold
+              brand: {
+                50: '#FAFAF9', 
+                100: '#F5F5F4',
+                200: '#E7E5E4',
+                800: '#44403C', 
+                900: '#292524',
+              },
+              primary: {
+                50: '#F2F8F1',
+                100: '#E1EFE0',
+                200: '#C5DFC2',
+                500: '#5D9C59',
+                600: '#3A6B37', // Deep Natural Green (Main)
+                700: '#2E552C',
+                800: '#264324',
+                900: '#1A2E19', // Very Dark Forest
+              },
+              accent: {
+                400: '#FACC15',
+                500: '#EAB308', // Gold
+                600: '#CA8A04',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FAFAF9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3A6B37;
+        border-radius: 4px;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.90);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-primary-800 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
