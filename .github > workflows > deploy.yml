@@ -24,9 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install dependencies
-        run: npm install
-      - name: Build project
+    - name: Build project
+        run: npm run build
+      
+      - name: Create .nojekyll
+        run: touch ./dist/.nojekyll  # <--- BU 2 SATIRI EKLEYİN
+      
+      - name: Upload artifact
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
